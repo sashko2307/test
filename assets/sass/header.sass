@@ -1,0 +1,147 @@
+@import "bootstrap"
+@import "fonts"
+@import "vars"
+@import "reset"
+
+.close
+	display: none
+
+.mob7,.mob9
+	display: none
+
+.button, a.button
+	font-size: 18px
+	font-weight: 600
+	padding: 15px 25px
+	transition: all .3
+	background: $a
+	border-radius: 29px
+	border: 1px solid $a
+	white-space: nowrap
+	text-align: center
+	display: inline-block
+	&:hover
+		color: $a
+		background: #000
+header
+	height: 60px
+	background: #fff
+	width: 100%
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 999
+	box-shadow: 0 5px 20px rgba(0,0,0,.07)
+	.left-wrap
+		align-items: center
+	.phone
+		margin-right: 35px
+	nav
+		li
+			display: inline-block
+.phone
+	white-space: nowrap
+.no-webp 
+	.box
+		color: red
+	.s-header
+		background: url("../img/h1-bg.jpg") no-repeat 50%
+		background-size: cover
+.webp 
+	.box
+		color: green
+	.s-header
+		background: url("../img/h1-bg.webp") no-repeat 50%
+		background-size: cover
+// .section-wrap
+// 	padding: 0 5%
+//	width: 100%
+.logo
+	img
+		display: block
+	a
+		display: block
+.s-header
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: rgba(#fff,.7)
+
+	
+	.section-wrap
+		min-height: calc(100vh - 60px)
+		padding: 60px 0
+		//height: 100vh
+		position: relative
+		display: flex
+		align-items: center
+.h1-block
+	.descr
+		font-size: 20px
+h1, .h1
+	font-size: 80px
+.flex
+	display: flex
+.check-block
+	font-size: 14px
+	display: flex
+	align-items: center
+	margin: 15px 0
+	label
+		display: flex
+		align-items: center
+		margin-bottom: 0
+	input
+		margin-right: 10px
+		min-width: 16px
+		width: 16px !important
+		height: 16px !important
+
+@media only screen and (max-width : 1700px)
+	html, body
+		font-size: 18px
+
+@media only screen and (max-width : 1500px)
+	html, body
+		font-size: 16px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+	/**/
+	.header
+		.close
+			position: absolute
+			right: 15px
+			top: 15px
+			font-size: 30px
+			cursor: pointer
+			display: block
+			width: 30px
+		ul
+			height: auto
+		.navigation
+			position: absolute
+			right: 0
+			top: 65px
+			width: 320px
+			background-color: #fff
+			z-index: 99
+			padding: 15px
+			li
+				display: block
+				a
+					padding: 10px 15px 
+					display: block
+					min-height: 51px
+	.mobil-mnu
+		display: block
+		position: absolute
+		top: 20px
+		right: 15px
+	
+

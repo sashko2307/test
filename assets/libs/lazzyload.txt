@@ -1,0 +1,5 @@
+<img data-src="img/name-01.svg" src="img/lazzy.jpg" class="lazyload"  alt="pic">
+
+<img data-src="img/name-01.svg" src="img/lazzy.webp" class="lazyload"  alt="pic">
+
+<img data-src="<?php echo $aboutRow['about_slider_pic']; ?>" class="lazyload"  src="<?php echo get_template_directory_uri();?>/img/lazzy.jpg" alt="pic">

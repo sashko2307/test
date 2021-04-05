@@ -1,0 +1,26 @@
+$('.slider-feedback .wrap-slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+		startCar(".progress")
+		var page = (currentSlide ? currentSlide : 0) + 1;
+	    var pes = 100 / slick.slideCount;
+
+		$(".progress-2").animate({        
+			    	"width": page *  pes + "%"      // прогресса линия
+			    })
+	    $(".num-sl-2-end").text("0" + slick.slideCount); //  вывод количества слайдов
+	    $(".num-sl-2").text(page);                       //  вывод текущего слайда
+	});
+
+а вот после этого - сам слайдер
+
+	$('.slider-feedback .wrap-slider').slick({
+	   slidesToShow: 1,
+		slidesToScroll: 1,
+	   dots: false,
+	   arrows: true,
+	});
+
+$('.firstDiv').slick('slickGoTo', 4)
+
+$(".popup").on("click", function() {
+		$('.slider-feedback .wrap-slider').slick("reinit")
+	})

@@ -1,0 +1,48 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+	@font-face
+		font-family: $font-family
+		font-weight: $weight
+		font-style: $style
+		font-display: swap
+		@if $asset-pipeline == true 
+			src: font-url('#{$file-path}.eot')
+			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+		@else
+			src: url('#{$file-path}.eot')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
+
+@mixin ff($font-family, $file-path, $weight: normal)
+	@font-face 
+		font-family: $font-family
+		font-weight: $weight
+		font-display: swap
+		src: url($file-path + ".otf"),  url($file-path + ".eot")  format('embedded-opentype'), url($file-path + ".otf")  format('opentype'),  url($file-path + ".svg")  format('svg'), url($file-path + ".ttf")  format('truetype'), url($file-path + ".woff")  format('woff'), url($file-path + ".woff2")  format('woff2')
+
+@mixin lg($deg)
+	background: linear-gradient($deg, #6EBD3D, #3C8510)
+
+@mixin img()
+	max-width: 1000%
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+
+@mixin bxsh()
+	box-shadow: 0px 8px 8px rgba(#000, .25)
+
+
+@mixin place($cl)
+	&::-webkit-input-placeholder
+		color: $cl
+
+	&::-moz-placeholder
+		color: $cl
+
+	&:-moz-placeholder
+		color: $cl
+
+	&:-ms-input-placeholder
+		color: $cl
+
